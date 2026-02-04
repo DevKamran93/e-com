@@ -21,7 +21,6 @@ class RoleSeeder extends Seeder
         foreach ($roles as $name => $description) {
             // Spatie's findOrCreate handles the "check if exists" logic automatically
             Role::findOrCreate($name, 'web');
-
             // Note: Spatie's default table doesn't have a 'description' column.
             // If you added one via a migration, you can update it like this:
             // Role::where('name', $name)->update(['description' => $description]);
